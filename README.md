@@ -1,0 +1,1 @@
+A collection of scripts useful for git so my bad memory doesn't forget.
