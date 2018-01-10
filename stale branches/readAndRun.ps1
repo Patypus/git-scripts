@@ -1,7 +1,9 @@
-$branchNames = Get-Content "data.txt"
+$branchNames = Get-Content "staleBranches.txt"
 
 foreach($branch in $branchNames) {
-   $deleteCommand = "echo " + $branch
-   #& $deleteCommand
+   $deleteCommand = "git branch -D " + $branch
+   $pushCommand = "git push origin :" + $branch
+   
    iex $deleteCommand
+   iex $pushCommand
 }
